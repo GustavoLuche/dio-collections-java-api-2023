@@ -39,7 +39,7 @@ public class ListaTarefas {
         if(!tarefasSet.isEmpty()) {
             System.out.println(tarefasSet);
         } else {
-            System.out.println("Tarefa não encontrada!");
+            System.out.println("O conjunto está vazio");
         }
     }
 
@@ -88,7 +88,9 @@ public class ListaTarefas {
         }
 
         if (tarefaParaMarcarComoPendente != null) {
-            tarefaParaMarcarComoPendente.setConcluida(false);
+            if(tarefaParaMarcarComoPendente.isConcluida()) {
+                tarefaParaMarcarComoPendente.setConcluida(false);
+            }
         } else {
             System.out.println("Tarefa não encontrada na lista.");
         }
